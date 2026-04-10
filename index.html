@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dwarka Tuition Centre | Excellence in Education</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#005c3c",
+                        "error-container": "#ffdad6",
+                        "secondary": "#2c694e",
+                        "surface-variant": "#e0e3e2",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d9e2ff",
+                        "inverse-surface": "#2d3131",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#002114",
+                        "inverse-primary": "#b0c6ff",
+                        "primary": "#00357f",
+                        "secondary-container": "#aeeecb",
+                        "on-background": "#181c1c",
+                        "background": "#f7faf9",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#92f7c3",
+                        "outline-variant": "#c3c6d5",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container-highest": "#e0e3e2",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#00422a",
+                        "on-primary-fixed-variant": "#00429b",
+                        "inverse-on-surface": "#eef1f0",
+                        "on-primary-fixed": "#001945",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "secondary-fixed": "#b1f0ce",
+                        "surface-container-high": "#e6e9e8",
+                        "surface-dim": "#d7dbda",
+                        "outline": "#737784",
+                        "on-secondary-container": "#316e52",
+                        "on-tertiary-container": "#71d6a4",
+                        "on-primary-container": "#a9c1ff",
+                        "surface-container-low": "#f1f4f3",
+                        "on-secondary-fixed-variant": "#0e5138",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#181c1c",
+                        "surface-tint": "#215abd",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "tertiary-fixed-dim": "#75daa8",
+                        "on-surface-variant": "#434653",
+                        "surface": "#f7faf9",
+                        "secondary-fixed-dim": "#95d4b3",
+                        "surface-container": "#ebeeed",
+                        "primary-container": "#004aad"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(to right, #00357f, #004aad);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-black tracking-tighter text-blue-900 font-headline" style="">Dwarka Tuition Centre
+            </div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-blue-700 border-b-2 border-blue-600 font-headline font-bold text-lg tracking-tight transition-all duration-300"
+                    href="#home" style="">Home</a>
+                <a class="text-slate-600 hover:text-blue-600 font-headline font-bold text-lg tracking-tight transition-all duration-300"
+                    href="#about" style="">About</a>
+                <a class="text-slate-600 hover:text-blue-600 font-headline font-bold text-lg tracking-tight transition-all duration-300"
+                    href="#courses" style="">Courses</a>
+                <a class="text-slate-600 hover:text-blue-600 font-headline font-bold text-lg tracking-tight transition-all duration-300"
+                    href="#contact" style="">Contact</a>
+                <a class="bg-primary text-on-primary px-6 py-2 rounded-full font-headline font-bold hover:scale-105 active:scale-95 transition-all duration-300"
+                    href="#enquire" style="">Enquire Now</a>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-[921px] flex items-center px-8 max-w-7xl mx-auto py-12" id="home">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-sm font-semibold"
+                        style="">
+                        <span class="material-symbols-outlined text-sm" style="">verified_user</span>
+                        100% Result Oriented Coaching
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-headline font-extrabold text-primary leading-[1.1] tracking-tight"
+                        style="">Best Tuition Centre for Academic Excellence
+                    </h1>
+                    <p class="text-xl text-on-surface-variant max-w-lg leading-relaxed" style="">
+                        Admissions Open for 1st to 12th Standard. We provide an intellectual sanctuary for students to
+                        achieve academic mastery and beyond.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a class="btn-gradient text-on-primary px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+                            href="https://wa.me/919342411402" style="">
+                            <span class="material-symbols-outlined" style="">chat</span>
+                            Enquire on WhatsApp
+                        </a>
+                        <a class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+                            href="tel:+919342411402" style="">
+                            <span class="material-symbols-outlined" style="">call</span>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="relative bg-white rounded-[2rem] p-6 shadow-2xl border border-slate-100 flex items-center justify-center">
+                    <img alt="Dwarka Tuition Centre Flyer" class="w-full h-auto object-contain rounded-xl"
+                        src="./flyer.png" style="">
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="bg-surface-container-low py-24 px-8" id="about">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-start">
+                <div class="md:col-span-5">
+                    <h2 class="text-sm font-bold text-secondary uppercase tracking-[0.2em] mb-4" style="">Our Legacy
+                    </h2>
+                    <h3 class="text-4xl font-headline font-extrabold text-on-surface leading-tight" style="">Empowering
+                        Minds Through Excellence</h3>
+                </div>
+                <div class="md:col-span-7 text-lg text-on-surface-variant space-y-6">
+                    <p class="" style="">
+                        Dwarka Tuition Centre is more than just an educational institute; it is a space designed for
+                        focused excellence. We believe that every student possesses unique potential that requires the
+                        right environment to flourish.
+                    </p>
+                    <p class="" style="">
+                        Our team consists of highly experienced and qualified staff dedicated to bridging the gap
+                        between classroom learning and academic mastery. By focusing on individual attention and a
+                        personalized approach, we ensure that every student who walks through our doors is prepared for
+                        their academic challenges.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Specialities Grid -->
+        <section class="py-24 px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-headline font-extrabold text-primary" style="">Our Specialties</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="p-8 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary mb-4 block group-hover:scale-110 transition-transform"
+                        style="">school</span>
+                    <h4 class="text-xl font-headline font-bold text-on-surface mb-2" style="">Qualified Staffs</h4>
+                    <p class="text-on-surface-variant" style="">Well experienced and subject-matter experts dedicated to
+                        student growth.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="p-8 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary mb-4 block group-hover:scale-110 transition-transform"
+                        style="">schedule</span>
+                    <h4 class="text-xl font-headline font-bold text-on-surface mb-2" style="">Flexible Timings</h4>
+                    <p class="text-on-surface-variant" style="">Multiple batches to accommodate school schedules and
+                        extracurriculars.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="p-8 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary mb-4 block group-hover:scale-110 transition-transform"
+                        style="">person_search</span>
+                    <h4 class="text-xl font-headline font-bold text-on-surface mb-2" style="">Individual Attention</h4>
+                    <p class="text-on-surface-variant" style="">Small batch sizes ensuring every student gets their
+                        doubts cleared.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="p-8 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary mb-4 block group-hover:scale-110 transition-transform"
+                        style="">menu_book</span>
+                    <h4 class="text-xl font-headline font-bold text-on-surface mb-2" style="">Board Exam Special</h4>
+                    <p class="text-on-surface-variant" style="">Intensive coaching specifically designed for 10th and
+                        12th standards.</p>
+                </div>
+                <!-- Card 5 -->
+                <div
+                    class="p-8 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary mb-4 block group-hover:scale-110 transition-transform"
+                        style="">groups</span>
+                    <h4 class="text-xl font-headline font-bold text-on-surface mb-2" style="">Parent-Teacher Meetings
+                    </h4>
+                    <p class="text-on-surface-variant" style="">Regular monthly updates to parents regarding student
+                        progress.</p>
+                </div>
+                <!-- Card 6 -->
+                <div
+                    class="p-8 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary mb-4 block group-hover:scale-110 transition-transform"
+                        style="">workspace_premium</span>
+                    <h4 class="text-xl font-headline font-bold text-on-surface mb-2" style="">Guaranteed Results</h4>
+                    <p class="text-on-surface-variant" style="">Our proven methodology ensures 100% academic improvement
+                        and success.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Courses Offered (Student Success Section) -->
+        <section class="bg-primary text-on-primary py-24 px-8 overflow-hidden relative" id="courses">
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/2">
+            </div>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-headline font-extrabold mb-8" style="">Comprehensive
+                            Curriculum for Excellence</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <span
+                                    class="bg-secondary-container text-on-secondary-container p-2 rounded-lg material-symbols-outlined"
+                                    style="">auto_stories</span>
+                                <div>
+                                    <h4 class="text-xl font-bold" style="">Primary &amp; High School (1st - 9th)</h4>
+                                    <p class="text-on-primary-container/80" style="">Strong foundation in core subjects
+                                        like Mathematics, Science, and English.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span
+                                    class="bg-secondary-container text-on-secondary-container p-2 rounded-lg material-symbols-outlined"
+                                    style="">stars</span>
+                                <div>
+                                    <h4 class="text-xl font-bold" style="">Secondary Board Coaching (10th)</h4>
+                                    <p class="text-on-primary-container/80" style="">Intensive preparation with previous
+                                        year question papers and mock tests.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span
+                                    class="bg-secondary-container text-on-secondary-container p-2 rounded-lg material-symbols-outlined"
+                                    style="">military_tech</span>
+                                <div>
+                                    <h4 class="text-xl font-bold" style="">Higher Secondary Mastery (11th - 12th)</h4>
+                                    <p class="text-on-primary-container/80" style="">Specialized streams
+                                        (Science/Commerce) with focus on scoring 480+ in boards.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white/5 backdrop-blur-md rounded-3xl p-6 border border-white/10 flex flex-col items-center">
+                        <img alt="Student Success" class="rounded-2xl w-full aspect-video object-cover mb-6"
+                            data-alt="Focused high school student writing notes in a neat notebook with professional school supplies in a bright classroom"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-J13JDqID0IDZVt1-F1f-N4p4EsvsPDeCv_77R0gAeZMHHqmXZVHbixs_WTw1YnE-DjHnLdHYX5voAmXgTq88dmXWsUJsrGo_FKELQoHVdUmfab4F79J2VHjuWUSNcclwkJo9Rfj0L4z8rRFx-8qwF9Pj5GdBwXEUOTLH5XQAfKrZsQ_w2YpJCAPQvthycSWgI62IXAIN4msOCEcHgyTLotIdri_1m0V_vS7Aw4mwvoo2fDhsnxEVuq9syrmPtd9mZWWsXWl3NeS9"
+                            style="">
+                        <div class="grid grid-cols-2 gap-4 w-full">
+                            <div
+                                class="text-center p-6 bg-white/10 rounded-2xl flex flex-col justify-center items-center">
+                                <div class="text-4xl font-black mb-1" style="">15+</div>
+                                <div class="text-[10px] font-bold uppercase tracking-widest opacity-80 leading-tight"
+                                    style="">Years Experience</div>
+                            </div>
+                            <div
+                                class="text-center p-6 bg-white/10 rounded-2xl flex flex-col justify-center items-center">
+                                <div class="text-4xl font-black mb-1" style="">1k+</div>
+                                <div class="text-[10px] font-bold uppercase tracking-widest opacity-80 leading-tight"
+                                    style="">Students Taught</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-24 px-8 bg-surface">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-headline font-extrabold text-primary" style="">Voices of Trust</h2>
+                    <p class="text-on-surface-variant mt-4" style="">Hear from parents and students who achieved their
+                        dreams with us.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-surface-container-low p-8 rounded-2xl relative">
+                        <span
+                            class="material-symbols-outlined text-primary-fixed-dim absolute top-6 right-6 text-6xl opacity-20"
+                            style="">format_quote</span>
+                        <div class="flex text-tertiary mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                        </div>
+                        <p class="italic text-on-surface-variant mb-6" style="">"The transformation in my son's math
+                            scores was remarkable. The individual attention he received at Dwarka was exactly what he
+                            needed."</p>
+                        <div>
+                            <h5 class="font-bold text-on-surface" style="">Mrs. Lakshmi Ram</h5>
+                            <p class="text-sm text-on-surface-variant" style="">Parent of 10th Grade Student</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-low p-8 rounded-2xl relative">
+                        <span
+                            class="material-symbols-outlined text-primary-fixed-dim absolute top-6 right-6 text-6xl opacity-20"
+                            style="">format_quote</span>
+                        <div class="flex text-tertiary mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                        </div>
+                        <p class="italic text-on-surface-variant mb-6" style="">"Experienced staff who really know how
+                            to simplify complex physics concepts. I felt fully prepared for my board exams."</p>
+                        <div>
+                            <h5 class="font-bold text-on-surface" style="">Arjun K.</h5>
+                            <p class="text-sm text-on-surface-variant" style="">12th Standard Student</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-low p-8 rounded-2xl relative">
+                        <span
+                            class="material-symbols-outlined text-primary-fixed-dim absolute top-6 right-6 text-6xl opacity-20"
+                            style="">format_quote</span>
+                        <div class="flex text-tertiary mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                        </div>
+                        <p class="italic text-on-surface-variant mb-6" style="">"Regular PTMs kept me in the loop about
+                            my daughter's progress. The coaching here is disciplined yet very encouraging."</p>
+                        <div>
+                            <h5 class="font-bold text-on-surface" style="">Mr. Suresh Babu</h5>
+                            <p class="text-sm text-on-surface-variant" style="">Parent of 8th Grade Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Enquiry Form Section -->
+        <section class="py-24 px-8 max-w-7xl mx-auto" id="enquire">
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 bg-primary text-on-primary">
+                    <h2 class="text-4xl font-headline font-extrabold mb-6" style="">Start Your Journey Today</h2>
+                    <p class="text-on-primary-container text-lg mb-12" style="">Fill out the form and our academic
+                        counselor will get back to you within 24 hours to discuss your educational goals.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined" style="">call</span>
+                            </div>
+                            <div>
+                                <p class="text-sm opacity-70" style="">Call us directly</p>
+                                <p class="font-bold" style="">+91 93424 11402</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined" style="">mail</span>
+                            </div>
+                            <div>
+                                <p class="text-sm opacity-70" style="">Email Us</p>
+                                <p class="font-bold" style="">dwarkatuitioncentre@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-12 bg-white">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-on-surface-variant mb-2" style="">Student
+                                Name</label>
+                            <input
+                                class="w-full bg-surface-container-low border-0 rounded-xl p-4 focus:ring-2 focus:ring-primary"
+                                placeholder="Enter full name" type="text">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-on-surface-variant mb-2" style="">Phone
+                                Number</label>
+                            <input
+                                class="w-full bg-surface-container-low border-0 rounded-xl p-4 focus:ring-2 focus:ring-primary"
+                                placeholder="Enter contact number" type="tel">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-on-surface-variant mb-2" style="">Applying for
+                                Class</label>
+                            <select
+                                class="w-full bg-surface-container-low border-0 rounded-xl p-4 focus:ring-2 focus:ring-primary">
+                                <option>Select Standard</option>
+                                <option>1st - 5th Std</option>
+                                <option>6th - 9th Std</option>
+                                <option>10th Std</option>
+                                <option>11th Std</option>
+                                <option>12th Std</option>
+                            </select>
+                        </div>
+                        <button
+                            class="w-full btn-gradient text-on-primary py-4 rounded-xl font-bold shadow-lg hover:shadow-primary/20 transition-all"
+                            type="submit" style="">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="py-24 px-8 max-w-4xl mx-auto">
+            <h2 class="text-3xl font-headline font-extrabold text-center text-primary mb-12" style="">Frequently Asked
+                Questions</h2>
+            <div class="space-y-4">
+                <details class="group bg-surface-container-low rounded-2xl" style="">
+                    <summary
+                        class="list-none p-6 flex justify-between items-center cursor-pointer font-bold text-on-surface"
+                        style="">
+                        What are the tuition timings?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform"
+                            style="">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-on-surface-variant" style="">
+                        We offer multiple batches from 4:30 PM to 8:30 PM on weekdays. Special weekend batches are also
+                        available for higher secondary students.
+                    </div>
+                </details>
+                <details class="group bg-surface-container-low rounded-2xl" style="">
+                    <summary
+                        class="list-none p-6 flex justify-between items-center cursor-pointer font-bold text-on-surface"
+                        style="">
+                        Do you provide study materials?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform"
+                            style="">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-on-surface-variant" style="">
+                        Yes, we provide curated study notes, practice worksheets, and previous years' solved board
+                        papers for all subjects.
+                    </div>
+                </details>
+                <details class="group bg-surface-container-low rounded-2xl" style="">
+                    <summary
+                        class="list-none p-6 flex justify-between items-center cursor-pointer font-bold text-on-surface"
+                        style="">
+                        What is the batch size?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform"
+                            style="">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-on-surface-variant" style="">
+                        To ensure individual attention, we keep our batches small, typically between 8-12 students per
+                        session.
+                    </div>
+                </details>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="py-24 px-8 bg-surface-container-low" id="contact">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <h2 class="text-4xl font-headline font-extrabold text-primary" style="">Visit Our Centre</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-secondary" style="">location_on</span>
+                            <p class="text-lg" style="">Address available upon request.<br>Visit us at our central
+                                branch.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-secondary" style="">phone_iphone</span>
+                            <p class="text-lg" style="">+91 93424 11402</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-secondary" style="">alternate_email</span>
+                            <p class="text-lg" style="">dwarkatuitioncentre@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="pt-8">
+                        <h4 class="font-bold mb-4" style="">Limited Seats Available – Enroll Now</h4>
+                        <div class="flex gap-4">
+                            <a class="p-4 bg-primary text-on-primary rounded-full hover:scale-110 transition-transform"
+                                href="tel:+919342411402" style=""><span class="material-symbols-outlined"
+                                    style="">call</span></a>
+                            <a class="p-4 bg-tertiary-container text-on-tertiary-container rounded-full hover:scale-110 transition-transform"
+                                href="https://wa.me/919342411402" style=""><span class="material-symbols-outlined"
+                                    style="">chat</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-xl aspect-square md:aspect-auto h-[400px]">
+                    <div class="w-full h-full bg-slate-200 relative group" data-location="Excellence in Education"
+                        style="">
+                        <img alt="Map Placeholder" class="w-full h-full object-cover"
+                            data-alt="Modern architectural map graphic showing urban streets and locations in a clean minimalist blue and white design"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8fN9ylfVPFA_L6wLL16lGlqDhT7GmLDU1KGlsaQq2nLpDowFyPMWBSMyivGl0k3dGXpHApHXKvWNQ_4RFRWgJI_9Xe1Y4NeRRr9gE2PVf4OO1_QIawUqP0oQsGJEDakcUGUchTTCeHq_mROumj74LjdBDzJinSwVDbtu4bYwCEFiIv75xZQVEInwmKPhs3MT7UBpn-UVfnK_l5BpDZzJ-8UIiOBy2L6DMw693QXb5DA-wKZdiatgfaKvDPXUIPk5v03G7mWMPLtk0"
+                            style="">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-primary/20 backdrop-blur-[2px]">
+                            <div class="bg-white p-6 rounded-2xl shadow-2xl text-center">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-2"
+                                    style="">location_on</span>
+                                <p class="font-bold text-on-surface" style="">Find us Today</p>
+                                <p class="text-xs text-on-surface-variant mt-1" style="">Click to open location in Maps
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-8 pt-16 pb-24 md:pb-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="font-headline font-extrabold text-blue-900 text-2xl mb-6" style="">Dwarka Tuition Centre
+                </div>
+                <p class="text-slate-500 max-w-sm leading-relaxed mb-8" style="">Providing quality education and
+                    personalized coaching to help students achieve their maximum potential in board exams and beyond.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                        href="#" style=""><span class="material-symbols-outlined" style="">social_leaderboard</span></a>
+                    <a class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                        href="#" style=""><span class="material-symbols-outlined" style="">share</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-primary mb-6" style="">Quick Links</h4>
+                <ul class="space-y-4">
+                    <li class="" style=""><a class="text-slate-500 hover:text-blue-700 transition-colors" href="#home"
+                            style="">Home</a></li>
+                    <li class="" style=""><a class="text-slate-500 hover:text-blue-700 transition-colors" href="#about"
+                            style="">About Institute</a></li>
+                    <li class="" style=""><a class="text-slate-500 hover:text-blue-700 transition-colors"
+                            href="#courses" style="">Our Courses</a></li>
+                    <li class="" style=""><a class="text-slate-500 hover:text-blue-700 transition-colors"
+                            href="#contact" style="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-primary mb-6" style="">Legal</h4>
+                <ul class="space-y-4">
+                    <li class="" style=""><a class="text-slate-500 hover:text-blue-700 transition-colors" href="#"
+                            style="">Privacy Policy</a></li>
+                    <li class="" style=""><a class="text-slate-500 hover:text-blue-700 transition-colors" href="#"
+                            style="">Terms of Service</a></li>
+                    <li class="" style=""><a class="text-slate-500 hover:text-blue-700 transition-colors" href="#"
+                            style="">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 text-center text-slate-500 text-sm" style="">
+            © 2024 Dwarka Tuition Centre. All rights reserved.
+        </div>
+    </footer>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 backdrop-blur-lg shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-3xl">
+        <a class="flex flex-col items-center justify-center text-slate-500 px-6 py-2 hover:scale-105 transition-transform active:scale-90 duration-150"
+            href="tel:+919342411402" style="">
+            <span class="material-symbols-outlined text-emerald-600" style="">call</span>
+            <span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1" style="">Call Us</span>
+        </a>
+        <a class="flex flex-col items-center justify-center bg-emerald-50 text-emerald-700 rounded-2xl px-6 py-2 hover:scale-105 transition-transform active:scale-90 duration-150"
+            href="https://wa.me/919342411402" style="">
+            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">chat</span>
+            <span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1" style="">WhatsApp</span>
+        </a>
+    </nav>
+    <!-- Floating WhatsApp (Desktop) -->
+    <a class="hidden md:flex fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50"
+        href="https://wa.me/919342411402" style="">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.634 1.437h.005c6.558 0 11.895-5.335 11.898-11.893a11.821 11.821 0 00-3.48-8.413Z">
+            </path>
+        </svg>
+    </a>
+</body>
+
+</html>
