@@ -164,20 +164,28 @@
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </nav>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-[50] flex flex-col items-center justify-center gap-8 hidden opacity-0 transition-opacity duration-300">
-            <a href="#home" class="text-2xl font-bold text-primary transition-colors mobile-link">Home</a>
-            <a href="#about" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">About</a>
-            <a href="#subjects" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">Subjects</a>
-            <a href="#committees" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">Committees</a>
-            <a href="#gallery" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">Gallery</a>
-            <a href="#contact" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">Contact</a>
-            <a href="#enquire" class="btn-premium text-white px-8 py-3 rounded-full text-xl font-bold shadow-premium mobile-link mt-4">
-                Enquire Now
-            </a>
-        </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[70] hidden opacity-0 transition-opacity duration-300">
+        <!-- Drawer Panel -->
+        <div id="mobile-drawer" class="absolute top-0 right-0 w-[80%] max-w-sm h-full bg-white shadow-2xl flex flex-col pt-24 px-8 transform translate-x-full transition-transform duration-300">
+            <!-- Close Button -->
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-on-surface p-2 bg-slate-100 rounded-full w-10 h-10 flex items-center justify-center hover:bg-slate-200 transition-colors">
+                <span class="material-symbols-outlined text-lg">close</span>
+            </button>
+            
+            <div class="flex flex-col gap-8">
+                <a href="#home" class="text-lg font-bold text-on-surface hover:text-primary transition-colors mobile-link">Home</a>
+                <a href="#about" class="text-lg font-medium text-on-surface hover:text-primary transition-colors mobile-link">About</a>
+                <a href="#subjects" class="text-lg font-medium text-on-surface hover:text-primary transition-colors mobile-link">Subjects</a>
+                <a href="#committees" class="text-lg font-medium text-on-surface hover:text-primary transition-colors mobile-link">Committees</a>
+                <a href="#gallery" class="text-lg font-medium text-on-surface hover:text-primary transition-colors mobile-link">Gallery</a>
+                <a href="#contact" class="text-lg font-medium text-on-surface hover:text-primary transition-colors mobile-link">Contact</a>
+            </div>
+
+        </div>
+    </div>
 
     <main>
         <!-- Hero Section -->
@@ -1150,31 +1158,35 @@
  
         // Mobile Menu Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileDrawer = document.getElementById('mobile-drawer');
         const mobileLinks = document.querySelectorAll('.mobile-link');
-        let isMenuOpen = false;
+
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.remove('opacity-0');
+                mobileDrawer.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            mobileMenu.classList.add('opacity-0');
+            setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+        }
 
         if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                isMenuOpen = !isMenuOpen;
-                if (isMenuOpen) {
-                    mobileMenu.classList.remove('hidden');
-                    setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
-                    mobileMenuBtn.querySelector('span').textContent = 'close';
-                } else {
-                    mobileMenu.classList.add('opacity-0');
-                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
-                    mobileMenuBtn.querySelector('span').textContent = 'menu';
-                }
+            mobileMenuBtn.addEventListener('click', openMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+            
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) closeMenu();
             });
 
             mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    isMenuOpen = false;
-                    mobileMenu.classList.add('opacity-0');
-                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
-                    mobileMenuBtn.querySelector('span').textContent = 'menu';
-                });
+                link.addEventListener('click', closeMenu);
             });
         }
 
