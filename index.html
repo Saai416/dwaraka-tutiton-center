@@ -134,8 +134,7 @@
     <header class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-50">
         <nav class="glass rounded-full px-6 py-4 flex justify-between items-center shadow-glass">
             <a href="#home" class="flex items-center gap-3 group">
-                <!-- Responsive Logo Image Slot -->
-                <img src="logo.png" alt="Dwarka Tuition Centre Logo" class="h-10 w-auto object-contain" id="header-logo" onerror="this.style.display='none'">
+                <img src="logo.png" alt="Dwarka Tuition Centre Logo" class="w-12 h-12 object-contain p-1 rounded-full bg-white shadow-sm" id="header-logo" onerror="this.style.display='none'">
                 <!-- Premium Text/Icon Fallback -->
                 <div class="flex items-center gap-3">
                     <span class="text-xl font-black tracking-tighter text-primary font-headline whitespace-nowrap">Dwarka Tuition Centre</span>
@@ -341,13 +340,13 @@
                     <!-- Left: Profile Card Column -->
                     <div class="lg:col-span-5 reveal relative">
                         <div class="relative z-10 glass p-5 rounded-[3rem] shadow-premium border border-slate-100/50">
-                            <!-- Image Container with soft gradients -->
                             <div class="relative aspect-square w-full rounded-[2rem] overflow-hidden bg-gradient-to-tr from-primary/10 to-secondary/10 shadow-inner">
-                                <img src="./founder.png" alt="Mr. Mothi.R - Founder & Director" 
-                                     class="w-full h-full object-cover" 
-                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <!-- Vector Fallback if image not found -->
-                                <div class="hidden absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-tr from-primary to-secondary text-white text-center p-8">
+                                <!-- UPDATE IMAGE HERE: Replace src="" with your actual image path like src="my-photo.jpg" -->
+                                <img src="" alt="Mr. Mothi.R - Founder & Director" 
+                                     class="hidden w-full h-full object-cover" 
+                                     onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden');">
+                                <!-- Vector Fallback until image is uploaded -->
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-tr from-primary to-secondary text-white text-center p-8">
                                     <span class="material-symbols-outlined text-7xl mb-4">account_circle</span>
                                     <h4 class="text-2xl font-headline font-bold">Mr. Mothi.R</h4>
                                     <p class="text-sm opacity-90 mt-1">Founder & Director</p>
@@ -1021,16 +1020,11 @@
                     <div class="relative reveal" style="animation-delay: 0.2s">
                         <div
                             class="relative z-10 rounded-[3rem] overflow-hidden shadow-premium aspect-square md:aspect-[4/3]">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8fN9ylfVPFA_L6wLL16lGlqDhT7GmLDU1KGlsaQq2nLpDowFyPMWBSMyivGl0k3dGXpHApHXKvWNQ_4RFRWgJI_9Xe1Y4NeRRr9gE2PVf4OO1_QIawUqP0oQsGJEDakcUGUchTTCeHq_mROumj74LjdBDzJinSwVDbtu4bYwCEFiIv75xZQVEInwmKPhs3MT7UBpn-UVfnK_l5BpDZzJ-8UIiOBy2L6DMw693QXb5DA-wKZdiatgfaKvDPXUIPk5v03G7mWMPLtk0"
-                                alt="Location Map" class="w-full h-full object-cover">
-                            <div
-                                class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] flex items-center justify-center">
-                                <a href="https://www.google.com/maps/search/?api=1&query=5%2F273B%2C+Thiru-Vi-Ka+St%2C+Santhosh+Nagar%2C+Kandhanchavadi%2C+Perungudi%2C+Chennai%2C+Tamil+Nadu+600096" target="_blank"
-                                    class="glass px-8 py-4 rounded-full font-bold text-primary flex items-center gap-3 shadow-premium hover:bg-white transition-all">
-                                    <span class="material-symbols-outlined">map</span>
-                                    Open in Google Maps
-                                </a>
-                            </div>
+                            <iframe 
+                                src="https://maps.google.com/maps?q=Dwarka%20Tuition%20Centre,%205%2F273B,%20Thiru-Vi-Ka%20St,%20Santhosh%20Nagar,%20Kandhanchavadi,%20Perungudi,%20Chennai,%20Tamil%20Nadu%20600096&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                class="w-full h-full border-0 grayscale-[0.5] hover:grayscale-0 transition-all duration-500" 
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                 </div>
@@ -1043,8 +1037,7 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-16">
             <div class="col-span-1 lg:col-span-2 space-y-8">
                 <a href="#home" class="flex items-center gap-3 group">
-                    <!-- Responsive Logo Image Slot -->
-                    <img src="logo.png" alt="Dwarka Tuition Centre Logo" class="h-12 w-auto object-contain" id="footer-logo" onerror="this.style.display='none'">
+                    <img src="logo.png" alt="Dwarka Tuition Centre Logo" class="w-16 h-16 object-contain p-1 rounded-full bg-white shadow-sm" id="footer-logo" onerror="this.style.display='none'">
                     <!-- Premium Text/Icon Fallback -->
                     <div class="flex items-center gap-3">
                         <span class="text-2xl font-black text-primary font-headline whitespace-nowrap">Dwarka Tuition Centre</span>
@@ -1089,7 +1082,7 @@
         </div>
         <div
             class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-on-surface-variant font-medium text-sm">© 2024 Dwarka Tuition Centre. All rights reserved.
+            <p class="text-on-surface-variant font-medium text-sm">© Dwarka Tuition Centre. All rights reserved.
             </p>
             <p class="text-xs font-bold text-on-surface-variant/40 uppercase tracking-[0.3em]">Crafted for Excellence
             </p>
