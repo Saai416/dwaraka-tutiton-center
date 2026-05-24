@@ -160,10 +160,23 @@
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <button class="md:hidden p-2 text-primary">
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-primary relative z-[60]">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-[50] flex flex-col items-center justify-center gap-8 hidden opacity-0 transition-opacity duration-300">
+            <a href="#home" class="text-2xl font-bold text-primary transition-colors mobile-link">Home</a>
+            <a href="#about" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">About</a>
+            <a href="#subjects" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">Subjects</a>
+            <a href="#committees" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">Committees</a>
+            <a href="#gallery" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">Gallery</a>
+            <a href="#contact" class="text-2xl font-medium text-on-surface hover:text-primary transition-colors mobile-link">Contact</a>
+            <a href="#enquire" class="btn-premium text-white px-8 py-3 rounded-full text-xl font-bold shadow-premium mobile-link mt-4">
+                Enquire Now
+            </a>
+        </div>
     </header>
 
     <main>
@@ -1011,7 +1024,7 @@
                                 <div>
                                     <p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-1">
                                         Email Enquiry</p>
-                                    <p class="text-lg font-bold text-on-surface">dwarkatuitioncentre@gmail.com</p>
+                                    <p class="text-sm sm:text-lg font-bold text-on-surface break-all">dwarkatuitioncentre@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -1138,6 +1151,36 @@
         });
  
         // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
+                    mobileMenuBtn.querySelector('span').textContent = 'close';
+                } else {
+                    mobileMenu.classList.add('opacity-0');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                    mobileMenuBtn.querySelector('span').textContent = 'menu';
+                }
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    isMenuOpen = false;
+                    mobileMenu.classList.add('opacity-0');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                    mobileMenuBtn.querySelector('span').textContent = 'menu';
+                });
+            });
+        }
+
+        // Header Scroll Logic
         const header = document.querySelector('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
