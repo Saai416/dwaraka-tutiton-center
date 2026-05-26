@@ -18,11 +18,11 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#ca8a04",      // True Gold
+                        primary: "#d4af37",      // Shiny Gold
                         secondary: "#ffffff",    // White
-                        accent: "#efb627",       // Bright Gold
-                        yellow: "#eab308",       // Soft Yellow
-                        background: "#ca8a04",   // True Gold Background
+                        accent: "#f3cd59",       // Bright Shimmering Gold
+                        yellow: "#f3e5ab",       // Soft Champagne Yellow
+                        background: "#d4af37",   // Shiny Gold Background
                         "on-surface": "#0a2543", // Deep Navy Blue
                         "on-surface-variant": "#475569", // Slate-600
                         "surface-container-low": "#ffffff", // White
@@ -59,8 +59,8 @@
                         }
                     },
                     boxShadow: {
-                        'premium': '0 20px 50px -12px rgba(202, 138, 4, 0.20)',
-                        'glass': '0 8px 32px 0 rgba(202, 138, 4, 0.12)',
+                        'premium': '0 20px 50px -12px rgba(212, 175, 55, 0.20)',
+                        'glass': '0 8px 32px 0 rgba(212, 175, 55, 0.12)',
                     }
                 },
             },
@@ -81,20 +81,20 @@
         }
 
         .glass-dark {
-            background: rgba(202, 138, 4, 0.04);
+            background: rgba(212, 175, 55, 0.04);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .text-gradient {
-            background: linear-gradient(135deg, #ca8a04 0%, #eab308 100%);
+            background: linear-gradient(135deg, #d4af37 0%, #f3cd59 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .text-gold-premium {
-            background: linear-gradient(135deg, #ffe066 0%, #f5b041 35%, #ca8a04 70%, #a16207 100%);
+            background: linear-gradient(135deg, #fff099 0%, #f7c948 35%, #d4af37 70%, #9a7215 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 1px 2px rgba(10, 37, 67, 0.15));
@@ -102,7 +102,7 @@
 
         .btn-premium {
             @apply relative overflow-hidden transition-all duration-300 active:scale-95;
-            background: linear-gradient(135deg, #ca8a04 0%, #eab308 100%);
+            background: linear-gradient(135deg, #d4af37 0%, #f3cd59 100%);
         }
 
         .btn-premium::after {
